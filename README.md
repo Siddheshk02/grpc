@@ -10,7 +10,7 @@ This project implements a Golang gRPC service for managing user details with fun
 - Dockerized for easy deployment
 
 ## Prerequisites
-
+- Go (1.19+)
 - Docker
 
 ## Getting Started
@@ -19,26 +19,29 @@ This project implements a Golang gRPC service for managing user details with fun
 
 To run the gRPC service, you can pull the pre-built Docker image from Docker Hub.
 
-```bash
+```
 docker pull Siddheshk02/grpc:latest
+```
 
 Running the Docker Container
 
 ```
 docker run -p 50051:50051 Siddheshk02/grpc:latest
-
+```
 
 You can use grpcurl to test the gRPC endpoints:
 
 1. GetUser:
 ```
 grpcurl -plaintext -d '{"id": 1}' localhost:50051 pb.UserService/GetUser
+```
 
 2. ListUsers:
 ```
 grpcurl -plaintext -d '{"ids": [1, 2]}' localhost:50051 pb.UserService/ListUsers
+```
 
 3. SearchUser:
 ```
 grpcurl -plaintext -d '{"fname": "Mark", "city": "CA"}' localhost:50051 pb.UserService/SearchUsers
-
+```
