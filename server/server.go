@@ -82,7 +82,7 @@ func (s *UserServiceServer) SearchUsers(ctx context.Context, req *pb.SearchUsers
 		if (req.Fname == "" || user.FName == req.Fname) &&
 			(req.City == "" || user.City == req.City) &&
 			(req.Phone == 0 || user.Phone == req.Phone) &&
-			(req.Married == user.Married) {
+			(!req.Married || user.Married == req.Married) {
 			users = append(users, &pb.User{
 				Id:      user.ID,
 				Fname:   user.FName,
