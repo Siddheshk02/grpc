@@ -1,6 +1,6 @@
 module github.com/Siddheshk02/grpc
 
-go 1.22.3
+go 1.19
 
 require (
 	github.com/stretchr/testify v1.9.0
