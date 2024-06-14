@@ -20,13 +20,13 @@ This project implements a Golang gRPC service for managing user details with fun
 To run the gRPC service, you can pull the pre-built Docker image from Docker Hub.
 
 ```
-docker pull Siddheshk02/grpc:latest
+docker pull siddheshk02/grpc:latest
 ```
 
 Running the Docker Container
 
 ```
-docker run -p 50051:50051 Siddheshk02/grpc:latest
+docker run -p 50051:50051 siddheshk02/grpc:latest
 ```
 
 You can use grpcurl to test the gRPC endpoints:
